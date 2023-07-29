@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.project.mesto.student.nomoreparties.sbs';
 
 function checkServerResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Код ошибки: ${res.status}`);

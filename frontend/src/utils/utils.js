@@ -7,7 +7,7 @@ export function renderLoading(isLoading, submitButton) {
 }
 
 export const configApi = {
-  url: 'http://localhost:3000',
+  url: 'https://api.project.mesto.student.nomoreparties.sbs',
   headers: {
     'Content-Type': 'application/json',
   },
