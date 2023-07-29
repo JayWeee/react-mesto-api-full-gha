@@ -1,3 +1,4 @@
+const { NODE_ENV, JWT_SECRET } = process.env;
 const { HTTP_STATUS_OK, HTTP_STATUS_CREATED } = require('http2').constants;
 const { hash, compare } = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -10,7 +11,7 @@ const BadRequestErr = require('../errors/bad-request-err');
 const ConflictErr = require('../errors/conflict-err');
 const UnauthorizedErr = require('../errors/unauthorized-err');
 
-const SECRET_KEY = 'verry-secret-key';
+const SECRET_KEY = NODE_ENV === 'production' ? JWT_SECRET : 'super-secret-key';
 
 const getUser = (req, res, next) => {
   User.findById(req.user._id)
