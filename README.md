@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.54.100
+IP 158.160.54.100
 
-Frontend project.mesto.students.nomoreparties.sbs
+Frontend https://project.mesto.students.nomoreparties.sbs
 
-Backend api.project.mesto.student.nomoreparties.sbs
+Backend https://api.project.mesto.student.nomoreparties.sbs
