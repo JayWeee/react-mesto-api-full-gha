@@ -1,0 +1,6 @@
+.popup__btn_inactive {
+  pointer-events: none;
+  color: rgba(0, 0, 0, .2);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .2);
+}

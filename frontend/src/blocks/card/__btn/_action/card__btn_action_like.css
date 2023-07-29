@@ -1,0 +1,17 @@
+.card__btn_action_like {
+  background: url(../../../../images/btn_like.svg) white no-repeat center/22px 19px;
+  border: none;
+  height: 19px;
+  width: 22px;
+  cursor: pointer;
+  transition: opacity .2s linear;
+  margin-bottom: 4px;
+}
+
+.card__btn_action_like:hover {
+  opacity: .5;
+}
+
+.card__btn_action_like-active {
+  background: url(../../../../images/btn_like_active.svg) white no-repeat center/22px 19px;
+}

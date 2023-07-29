@@ -1,0 +1,15 @@
+.burger-menu__line_active {
+  transition: transform .2s linear;
+}
+
+.burger-menu__line_active:nth-child(1) {
+  transform: translateY(9px) rotate(135deg);
+}
+
+.burger-menu__line_active:nth-child(2) {
+  display: none;
+}
+
+.burger-menu__line_active:nth-child(3) {
+  transform: rotate(45deg);
+}

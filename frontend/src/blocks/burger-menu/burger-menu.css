@@ -1,0 +1,22 @@
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: opacity .2s linear;
+  width: 24px;
+  height: 24px;
+}
+
+.burger-menu:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 690px) {
+  .burger-menu {
+    display: flex;
+    align-self: flex-end;
+    transform: translateY(25px);
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+.profile__btn_action_edit {
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  background: url(../../../../images/edit.svg) black no-repeat 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity .2s linear;
+}
+
+.profile__btn_action_edit:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 550px) {
+  .profile__btn_action_edit {
+    width: 18px;
+    height: 18px;
+  }
+}

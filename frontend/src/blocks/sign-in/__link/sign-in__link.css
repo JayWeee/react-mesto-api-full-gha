@@ -1,0 +1,12 @@
+.sign-in__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #fff;
+  transition: opacity .2s linear;
+}
+
+.sign-in__link:hover {
+  opacity: .6;
+}

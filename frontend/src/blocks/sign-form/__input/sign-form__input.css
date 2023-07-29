@@ -1,0 +1,23 @@
+.sign-form__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 0 0 13px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #ccc;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.sign-form__input:last-of-type {
+  margin-bottom: 216px;
+}
+
+@media screen and (max-width: 450px) {
+  .sign-form__input:last-of-type {
+    margin-bottom: 173px;
+  }
+}
