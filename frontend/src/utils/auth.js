@@ -33,6 +33,16 @@ export function authorize({ email, password }) {
   .then(checkServerResponse)
 }
 
+export function removeCoockies() {
+  return fetch(`${BASE_URL}/signout`, {
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(checkServerResponse)
+};
+
 export function getContent(userId) {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',

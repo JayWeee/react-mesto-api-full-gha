@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Route, Routes} from 'react-router-dom';
 import logo from '../images/logo.svg';
+import { removeCoockies } from '../utils/auth'
 
 function Header({ userData }) {
 
@@ -10,9 +11,9 @@ function Header({ userData }) {
     setIsBurgerMenuActive(!isBurgerMenuActive);
   }
 
-// Перенести в App
   function signOut() {
     localStorage.removeItem('userId');
+    removeCoockies()
   }
 
   return (
