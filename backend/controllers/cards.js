@@ -38,7 +38,8 @@ const deleteCardById = (req, res, next) => {
         next(new ForbiddenErr('Вы не можете удалять чужие карточки.'));
       } else {
         Card.deleteOne(card)
-          .then(res.send({ message: 'Пост удален.' }));
+          .then(res.send({ message: 'Пост удален.' }))
+          .catch((err) => next(err));
       }
     })
     .catch((err) => {
