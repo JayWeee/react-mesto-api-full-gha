@@ -1,5 +1,5 @@
 const { NODE_ENV, JWT_SECRET } = process.env;
-const { HTTP_STATUS_OK, HTTP_STATUS_CREATED } = require('http2').constants;
+const { HTTP_STATUS_CREATED } = require('http2').constants;
 const { hash, compare } = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { ValidationError, CastError } = require('mongoose').Error;
@@ -24,7 +24,7 @@ const getUserById = (req, res, next) => {
     .orFail(() => {
       throw new NotFoundErr('Пользователь по указанному _id не найден.');
     })
-    .then((user) => res.status(HTTP_STATUS_OK).send(user))
+    .then((user) => res.send(user))
     .catch((err) => {
       if (err instanceof CastError) {
         next(new BadRequestErr('Пользователь по указанному _id не найден.'));
@@ -34,7 +34,7 @@ const getUserById = (req, res, next) => {
 
 const getUsers = (req, res, next) => {
   User.find({})
-    .then((users) => res.status(HTTP_STATUS_OK).send(users))
+    .then((users) => res.send(users))
     .catch(next);
 };
 
@@ -71,7 +71,7 @@ const updateUser = (req, res, userData, next) => {
   User.findByIdAndUpdate(req.user._id, userData, {
     new: true,
     runValidators: true,
-  }).then((user) => res.status(HTTP_STATUS_OK).send(user))
+  }).then((user) => res.send(user))
     .catch((err) => {
       if (err instanceof ValidationError) {
         next(new BadRequestErr('Переданы некорректные данные при обновлении профиля.'));
@@ -108,7 +108,7 @@ const login = (req, res, next) => {
           { expiresIn: '7d' },
         );
         res.cookie('token', token, { maxAge: 3600000 * 24 * 7, httpOnly: true })
-          .status(HTTP_STATUS_OK).send({ userId: user._id });
+          .send({ userId: user._id });
       }))
     .catch(next);
 };
