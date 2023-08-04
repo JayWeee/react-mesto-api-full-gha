@@ -2,10 +2,11 @@
   background: url(../../../../images/btn_like.svg) white no-repeat center/22px 19px;
   border: none;
   height: 19px;
-  width: 22px;
+  width: 23px;
   cursor: pointer;
   transition: opacity .2s linear;
   margin-bottom: 4px;
+  padding: 0;
 }
 
 .card__btn_action_like:hover {

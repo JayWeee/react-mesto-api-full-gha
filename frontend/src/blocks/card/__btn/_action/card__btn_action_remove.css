@@ -8,6 +8,7 @@
   border: none;
   cursor: pointer;
   transition: opacity .2s linear;
+  padding: 0;
 }
 
 .card__btn_action_remove:hover {
