@@ -115,7 +115,6 @@ function App() {
 
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i === currentUser._id);
-    console.log(cards)
     api
       .changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
@@ -180,7 +179,7 @@ function App() {
           Promise.all([api.getUserInfo(), api.getInitialCards()])
             .then(([userData, cards]) => {
               setCurrentUser(userData);
-              setCards(cards);
+              setCards(cards.reverse());
             })
             .catch((err) => console.log(err));
 
